@@ -2,7 +2,7 @@
   "name": "yt-clone",
   "version": "1.0.0",
   "description": "a backend",
-  "main": "server.js",
+  "main": "src/server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,6 +11,9 @@
   "author": "Aditya Parashar",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1",
     "nodemon": "^3.1.4",
     "prettier": "^3.3.3"
   }
