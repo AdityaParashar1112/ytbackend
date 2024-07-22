@@ -1,14 +1,22 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import Express from "express";
 import dbConnection from "./db/indes.js";
+import { app } from "./app.js";
 
 
 dotenv.config();
 
 
 
-dbConnection();
+dbConnection()
+.then(()=>{
+   app.listen(process.env.PORT||5000,()=>{
+      console.log('server started',process.env.PORT)
+   })
+})
+.catch((err)=>{
+   console.log("Databse Connection Error",err)
+});
 
 /*
 const app = Express();
