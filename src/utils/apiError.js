@@ -1,16 +1,8 @@
-class apiError extends Error{
-   
-    constructor(statusCode,message="something went wrong",stackTrace,errro=[]){
-        super(message);
-        this.statusCode = statusCode;
-        this.message = message;
-        this.stackTrace = this.stackTrace;
-        this.error = error
-    }
+export const errorHandler = (res, status,message='somethiung went wrong')=>{
+        console.log("Staus",status)
+        res.send({
+        staus:status,
+        message:message,
+        succes:false
+     })
 }
-
-
-
-
-
-export {apiError};

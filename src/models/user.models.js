@@ -34,13 +34,8 @@ const userSchema = new Schema({
         lowercase:true,
         trim:true
     },
-    password:{
-        type:String,
-        required:true,
-        lowercase:true,
-        trim:true
-    },
-    coverimae:{
+   
+    coverimage:{
         type:String,
         lowercase:true,
         trim:true
@@ -51,7 +46,6 @@ const userSchema = new Schema({
     }],
     refreshtoken:{
         type:String,
-        required:true,
         lowercase:true,
         trim:true
     }
